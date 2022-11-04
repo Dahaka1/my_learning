@@ -8,7 +8,10 @@ for _ in range(n):
 data = [k for k in input().split()]
 i, j = int(data[0]), int(data[1])
 
-# стер строки
+
+for stroke in matrix:
+    stroke[i], stroke[j] = stroke[j], stroke[i]
+print('privet')
 
 for stroke in matrix:
     for elem in stroke:
