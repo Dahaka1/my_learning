@@ -8,14 +8,10 @@ col, row = letters.index(location[0]), 8 - int(location[1])
 
 matrix[row][col] = 'N'
 
-matrix[row - 1][col - 2] = '*' if row - 1 in range(8) and col - 2 in range(8) else '.'
-matrix[row - 1][col + 2] = '*' if row - 1 in range(8) and col + 2 in range(9) else '.'
-matrix[row - 2][col + 1] = '*' if row - 2 in range(8) and col + 1 in range(9) else '.'
-matrix[row - 2][col - 1] = '*' if row - 2 in range(8) and col - 1 in range(8) else '.'
-matrix[row + 1][col - 2] = '*' if row + 1 in range(9) and col - 2 in range(8) else '.'
-matrix[row + 1][col + 2] = '*' if row + 1 in range(9) and col + 2 in range(9) else '.'
-matrix[row + 2][col + 1] = '*' if row + 2 in range(9) and col + 1 in range(9) else '.'
-matrix[row + 2][col - 1] = '*' if row + 2 in range(9) and col - 1 in range(8) else '.'
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        if (col - j) * (row - i) == 2 or (col - j) * (row - i) == -2:
+            matrix[i][j] = '*'
 
 for i in matrix:
     for j in i:
