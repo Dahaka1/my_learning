@@ -1,9 +1,7 @@
 # -*- coding: utf8 -*-
-from string import ascii_lowercase
-
 matrix = [['.' for _ in range(8)] for _ in range(8)]
 
-letters = list(ascii_lowercase[:ascii_lowercase.index('i')])
+letters = list('abcdefgh')
 
 location = list(input())
 col, row = letters.index(location[0]), 8 - int(location[1])
