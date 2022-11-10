@@ -33,6 +33,20 @@ for i in range(len(matrix)):  # проверяем ее
 if count_secondary_diagonal != ctrl:
     answer = 'NO'
 
+for i in matrix:  # исходя из условия, 0 не должен присутствовать в матрице
+    if 0 in i:
+        answer = 'NO'
+
+matrix_for_counting_repeats = []  # исходя из условия, в матрице не должны повторяться числа - делаем проверку
+for i in matrix:
+    for j in i:
+        matrix_for_counting_repeats.append(j)
+matrix_for_counting_repeats = [matrix_for_counting_repeats.count(i) for i in matrix_for_counting_repeats]
+
+for i in matrix_for_counting_repeats:
+    if i > 1:
+        answer = 'NO'
+
 if answer == 'NO':  # если ответ не приравнялся ранее к "NO", выводим "YES"
     print(answer)
 else:
