@@ -17,4 +17,3 @@ for stroke in matrix:
     for elem in stroke:
         print(elem, end=' ')
     print()
-
