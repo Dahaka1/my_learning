@@ -11,7 +11,6 @@ i, j = int(data[0]), int(data[1])
 
 for stroke in matrix:
     stroke[i], stroke[j] = stroke[j], stroke[i]
-print('privet')
 
 for stroke in matrix:
     for elem in stroke:
