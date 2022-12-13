@@ -1,6 +1,7 @@
 # http://127.0.0.1:5000/hi http://127.0.0.1:5000/hi/ http://127.0.0.1:5000/hi/*ID*  - возможные запросы к серверу
 # for test:
 # curl -X *COMMAND* -d "{\"text\":\"val text dksh\", \"lang\":\"oo\"}" - H "Content-Type: application/json" http://127.0.0.1:5000/hi/5
+# screening (slashes '\') is required for windows
 
 from random import choice # модуль рандома для выдачи случайного значения в случае, если запрашиваемый id ответа не указан
 from flask import Flask # веб-разработка
