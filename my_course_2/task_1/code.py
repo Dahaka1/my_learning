@@ -1,15 +1,8 @@
-word, n, lst = input(), int(input()), []
-
-for _ in range(n):
-    lst.append(input())
+word, lst = input(), [input() for _ in range(int(input()))]
 
 str_vov = list('а, у, о, ы, и, э, я, ю, ё, е'.replace(', ', ''))
 
-indexes = []
-
-for i in range(len(word)):
-    if word[i] in str_vov:
-        indexes.append(i)
+indexes = [i for i in range(len(word)) if word[i] in str_vov]
 
 result = []
 
