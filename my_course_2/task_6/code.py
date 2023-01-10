@@ -1,5 +1,4 @@
-import csv
-import json
+import csv, json
 from datetime import datetime as dt
 
 # ____________________________
